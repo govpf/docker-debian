@@ -1,11 +1,11 @@
-FROM debian:stretch
+FROM debian:buster
 MAINTAINER Léonard TAVAE <leonard.tavae@informatique.gov.pf>
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV TZ Pacific/Tahiti
 
-COPY stretch/files/environment /etc/environment
-COPY stretch/files/locale.gen /etc/locale.gen
+COPY buster/files/environment /etc/environment
+COPY buster/files/locale.gen /etc/locale.gen
 
 RUN echo "$TZ" > /etc/timezone \
     && rm -f /etc/localtime \
