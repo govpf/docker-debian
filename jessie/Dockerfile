@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Léonard TAVAE <leonard.tavae@gmail.com>
+MAINTAINER Léonard TAVAE <leonard.tavae@informatique.gov.pf>
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV TZ Pacific/Tahiti
@@ -13,7 +13,6 @@ RUN echo "$TZ" > /etc/timezone \
     && dpkg-reconfigure -f noninteractive tzdata \
     && apt-get update && apt-get install -y -o DPkg::Options::="--force-confnew" --no-install-recommends \
         git locales net-tools curl ca-certificates \
-    && curl https://bin.gov.pf/artifactory/ca/casit.crt > /usr/local/share/ca-certificates/casit.crt \
     && curl https://bin.gov.pf/artifactory/ca/casit-prod2.crt > /usr/local/share/ca-certificates/casit-prod2.crt \
     && update-ca-certificates \
     && locale-gen fr_FR.UTF-8 \
