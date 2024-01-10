@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        versions: [latest, buster, jessie, stretch]
+        versions: [latest, buster, bullseye, bookworm]
     env:
       repo: "govpf/debian"
     steps:
