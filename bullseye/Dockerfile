@@ -4,8 +4,8 @@ MAINTAINER Léonard TAVAE <leonard.tavae@informatique.gov.pf>
 ENV DEBIAN_FRONTEND noninteractive
 ENV TZ Pacific/Tahiti
 
-COPY buster/files/environment /etc/environment
-COPY buster/files/locale.gen /etc/locale.gen
+COPY bullseye/files/environment /etc/environment
+COPY bullseye/files/locale.gen /etc/locale.gen
 
 RUN echo "$TZ" > /etc/timezone \
     && rm -f /etc/localtime \
