@@ -14,6 +14,7 @@ RUN echo "$TZ" > /etc/timezone \
     && apt-get update && apt-get install -y -o DPkg::Options::="--force-confnew" --no-install-recommends \
         git locales net-tools curl ca-certificates gnupg dirmngr \
     && curl https://bin.gov.pf/artifactory/ca/casit-prod2.crt > /usr/local/share/ca-certificates/casit-prod2.crt \
+    && curl https://bin.gov.pf/artifactory/ca/cadsi-prod.crt > /usr/local/share/ca-certificates/cadsi-prod.crt \
     && update-ca-certificates \
     && locale-gen fr_FR.UTF-8 \
     && dpkg-reconfigure locales \
