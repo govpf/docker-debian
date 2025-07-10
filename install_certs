@@ -13,6 +13,7 @@ CERT_URLS="$CA_ARTIFACTORY_URL/cadsi-prod.pem \
     $CA_CERTIGNA_URL/servicesca.crt"
 
 openssl x509 -in /usr/local/share/ca-certificates/cadsi-prod.pem -out /usr/local/share/ca-certificates/cadsi-prod.crt
+rm -f /usr/local/share/ca-certificates/cadsi-prod.pem
 
 for cert_url in $CERT_URLS
 do
