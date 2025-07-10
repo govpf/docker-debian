@@ -12,9 +12,6 @@ CERT_URLS="$CA_ARTIFACTORY_URL/cadsi-prod.pem \
     $CA_CERTIGNA_URL/certignarootca.crt \
     $CA_CERTIGNA_URL/servicesca.crt"
 
-openssl x509 -in /usr/local/share/ca-certificates/cadsi-prod.pem -out /usr/local/share/ca-certificates/cadsi-prod.crt
-rm -f /usr/local/share/ca-certificates/cadsi-prod.pem
-
 for cert_url in $CERT_URLS
 do
     cert_file="$(basename "$cert_url")"
@@ -26,5 +23,8 @@ do
     # Adds an eol char at the end of the file if not already present
     sed -i -e '$a\' "$cert_path"
 done
+
+openssl x509 -in /usr/local/share/ca-certificates/cadsi-prod.pem -out /usr/local/share/ca-certificates/cadsi-prod.crt
+rm -f /usr/local/share/ca-certificates/cadsi-prod.pem
 
 update-ca-certificates
