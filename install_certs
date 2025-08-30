@@ -3,6 +3,7 @@
 CA_ARTIFACTORY_URL="https://bin.gov.pf/artifactory/ca"
 CA_CERTINOMIS_URL="https://www.certinomis.fr/publi/cer"
 CA_CERTIGNA_URL="http://autorite.certigna.fr"
+CA_CERT_CERTIGNA_URL="https://cert.certigna.com"
 
 CERT_URLS="$CA_ARTIFACTORY_URL/cadsi-prod.pem \
     $CA_CERTINOMIS_URL/AC_Racine_G3.cer \
@@ -10,7 +11,8 @@ CERT_URLS="$CA_ARTIFACTORY_URL/cadsi-prod.pem \
     $CA_CERTINOMIS_URL/AC_CERTINOMIS_SSL.cer \
     $CA_CERTINOMIS_URL/AC_AGENTS.cer \
     $CA_CERTIGNA_URL/certignarootca.crt \
-    $CA_CERTIGNA_URL/servicesca.crt"
+    $CA_CERTIGNA_URL/servicesca.crt \
+    $CA_CERT_CERTIGNA_URL/CertignaServerAuthenticationOVCPEUCAG1.cer"
 
 for cert_url in $CERT_URLS
 do
