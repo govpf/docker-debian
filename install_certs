@@ -11,8 +11,9 @@ CERT_URLS="$CA_ARTIFACTORY_URL/cadsi-prod.pem \
     $CA_CERTINOMIS_URL/AC_AGENTS.cer \
     $CA_CERTIGNA_URL/certignarootca.crt \
     $CA_CERTIGNA_URL/servicesca.crt \
-    $CA_ARTIFACTORY_URL/Bundle_certificat_certigna.crt"
-
+    $CA_ARTIFACTORY_URL/Bundle_certificat_certigna.crt \
+    $CA_ARTIFACTORY_URL/CertignaServerAuthenticationOVCPCAG1.crt"
+    
 for cert_url in $CERT_URLS
 do
     cert_file="$(basename "$cert_url")"
