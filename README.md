@@ -2,4 +2,4 @@
 
 Ce dépôt contient les recettes permettant de générer les images Debian du Gouvernement de la Polynésie Française.
 
-#build le 8/10/25 11h34
+#build le 27/01/2026 13h31
