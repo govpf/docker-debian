@@ -13,7 +13,8 @@ CERT_URLS="$CA_GITHUB_URL/cadsi-prod.pem \
     $CA_CERTIGNA_URL/servicesca.crt \
     $CA_CERTIGNA_URL/servicesca_rootca.crt \
     $CA_GITHUB_URL/Bundle_certificat_certigna.crt \
-    $CA_GITHUB_URL/CertignaServerAuthenticationOVCPCAG1.crt"
+    $CA_GITHUB_URL/CertignaServerAuthenticationOVCPCAG1.crt" \
+    $CA_GITHUB_URL/certignawildca.crt"
     
 for cert_url in $CERT_URLS
 do
