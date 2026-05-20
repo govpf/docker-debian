@@ -1,6 +1,7 @@
 name: Publish Docker images
 
 on:
+  workflow_dispatch:
   push:
     branches: [ master ]
   schedule:
