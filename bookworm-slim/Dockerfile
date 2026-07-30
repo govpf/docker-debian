@@ -1,9 +1,6 @@
 # Use the official Debian 12 slim image as a base.
 FROM debian:bookworm-slim
 
-# Use standardized labels for authorship and metadata.
-LABEL org.opencontainers.image.authors="Tanguy Jouannic <tanguy.jouannic@administration.gov.pf>"
-
 # Set environment variables.
 ENV DEBIAN_FRONTEND="noninteractive"
 ENV TZ="Pacific/Tahiti"

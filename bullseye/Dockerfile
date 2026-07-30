@@ -1,8 +1,7 @@
 FROM debian:bullseye
-MAINTAINER Léonard TAVAE <leonard.tavae@informatique.gov.pf>
 
-ENV DEBIAN_FRONTEND noninteractive
-ENV TZ Pacific/Tahiti
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Pacific/Tahiti
 
 COPY bullseye/files/environment /etc/environment
 COPY bullseye/files/locale.gen /etc/locale.gen
@@ -20,8 +19,8 @@ RUN echo "$TZ" > /etc/timezone \
 COPY install_certs /tmp/install_certs
 RUN  bash -xe /tmp/install_certs
 
-ENV LANG fr_FR:UTF-8
-ENV LANGUAGE fr
-ENV LC_CTYPE fr_FR.utf8
-ENV LC_MESSAGES fr_FR.utf8
-ENV LC_ALL fr_FR.utf8
+ENV LANG=fr_FR.UTF-8
+ENV LANGUAGE=fr
+ENV LC_CTYPE=fr_FR.utf8
+ENV LC_MESSAGES=fr_FR.utf8
+ENV LC_ALL=fr_FR.utf8
