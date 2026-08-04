@@ -1,6 +1,9 @@
 # Use the official Debian 12 slim image as a base.
 FROM debian:bookworm-slim
 
+LABEL govpf.fromimage="debian:bookworm-slim"
+LABEL govpf.category="os"
+
 # Set environment variables.
 ENV DEBIAN_FRONTEND="noninteractive"
 ENV TZ="Pacific/Tahiti"

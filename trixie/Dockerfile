@@ -1,5 +1,8 @@
 FROM debian:trixie
 
+LABEL govpf.fromimage="debian:trixie"
+LABEL govpf.category="os"
+
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Pacific/Tahiti
 

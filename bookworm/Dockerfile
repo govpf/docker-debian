@@ -1,5 +1,8 @@
 FROM debian:bookworm
 
+LABEL govpf.fromimage="debian:bookworm"
+LABEL govpf.category="os"
+
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Pacific/Tahiti
 

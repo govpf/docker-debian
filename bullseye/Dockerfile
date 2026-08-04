@@ -1,5 +1,8 @@
 FROM debian:bullseye
 
+LABEL govpf.fromimage="debian:bullseye"
+LABEL govpf.category="os"
+
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Pacific/Tahiti
 
